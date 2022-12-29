@@ -6,7 +6,13 @@ Fork of https://openil.sourceforge.net/download.php
 ## deps
 ```sh
 pkg install cmake
-pkg install tiff
+```
+
+## how to clean up:
+```sh
+cd DevIL/DevIL
+rm -f CMakeCache.txt
+make clean
 ```
 
 ## how to compile:
