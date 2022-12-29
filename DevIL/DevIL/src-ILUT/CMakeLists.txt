@@ -12,7 +12,7 @@ if( CMAKE_SIZEOF_VOID_P EQUAL 8 )
     MESSAGE( "64 bit compiler detected" )
     SET( EX_PLATFORM 64 )
     SET( EX_PLATFORM_NAME "x64" )
-else( CMAKE_SIZEOF_VOID_P EQUAL 8 ) 
+else( CMAKE_SIZEOF_VOID_P EQUAL 8 )
     MESSAGE( "32 bit compiler detected" )
     SET( EX_PLATFORM 32 )
     SET( EX_PLATFORM_NAME "x86" )
@@ -43,7 +43,11 @@ source_group("Header Files" FILES ${ILUT_INC} )
 source_group("Resource Files" FILES ${ILUT_RSRC} )
 
 # Remove SHARED to create a static library
-add_library(ILUT SHARED ${ILUT_SRCS} ${ILUT_INC} ${ILUT_RSRC})
+if(BUILD_SHARED_LIBS)
+	add_library(ILUT SHARED ${ILUT_SRCS} ${ILUT_INC} ${ILUT_RSRC})
+else(BUILD_SHARED_LIBS)
+	add_library(ILUT ${ILUT_SRCS} ${ILUT_INC} ${ILUT_RSRC})
+endif(BUILD_SHARED_LIBS)
 
 ## add link sub library info
 target_link_libraries(ILUT

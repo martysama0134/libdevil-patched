@@ -12,7 +12,7 @@ if( CMAKE_SIZEOF_VOID_P EQUAL 8 )
     MESSAGE( "64 bit compiler detected" )
     SET( EX_PLATFORM 64 )
     SET( EX_PLATFORM_NAME "x64" )
-else( CMAKE_SIZEOF_VOID_P EQUAL 8 ) 
+else( CMAKE_SIZEOF_VOID_P EQUAL 8 )
     MESSAGE( "32 bit compiler detected" )
     SET( EX_PLATFORM 32 )
     SET( EX_PLATFORM_NAME "x86" )
@@ -43,7 +43,11 @@ source_group("Header Files" FILES ${ILU_INC} )
 source_group("Resource Files" FILES ${ILU_RSRC} )
 
 # Remove SHARED to create a static library
+if(BUILD_SHARED_LIBS)
 add_library(ILU SHARED ${ILU_SRCS} ${ILU_INC} ${ILU_RSRC})
+else(BUILD_SHARED_LIBS)
+add_library(ILU ${ILU_SRCS} ${ILU_INC} ${ILU_RSRC})
+endif(BUILD_SHARED_LIBS)
 
 
 ## ILU requires IL
