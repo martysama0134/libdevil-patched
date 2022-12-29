@@ -1,7 +1,7 @@
 # libdevil
 Fork of https://openil.sourceforge.net/download.php
 
-# FreeBSD
+# FreeBSD Configuration
 
 ## deps
 pkg install cmake
