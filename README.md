@@ -21,3 +21,13 @@ cd DevIL/DevIL
 cmake CMakeLists.txt
 make install
 ```
+
+## how to change compiler:
+Open `DevIL/DevIL/CMakeLists.txt`, and edit this:
+
+```sh
+set(CMAKE_C_COMPILER "gcc12")
+set(CMAKE_CXX_COMPILER "g++12")
+```
+
+Remove this part if you want to use the default CC CXX values.
