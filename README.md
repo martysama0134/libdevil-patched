@@ -6,6 +6,7 @@ Fork of https://openil.sourceforge.net/download.php
 ## deps
 ```sh
 pkg install cmake
+pkg install tiff
 ```
 
 ## how to compile:
