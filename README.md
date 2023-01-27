@@ -31,3 +31,12 @@ set(CMAKE_CXX_COMPILER "g++12")
 ```
 
 Remove this part if you want to use the default CC CXX values.
+
+## how to specify environment:
+
+Open `DevIL/DevIL/CMakeLists.txt`, and add this:
+
+```
+set(CMAKE_CXX_FLAGS -m32)
+set(CMAKE_CXX_FLAGS -L/usr/local/lib32/gcc12/)
+```
