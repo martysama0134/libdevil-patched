@@ -739,10 +739,10 @@ ILboolean iSaveTargaInternal()
 	// It's actually the 'Image Descriptor Byte'
 	// from wiki: Image descriptor (1 byte): bits 3-0 give the alpha channel depth, bits 5-4 give direction
 	Temp = 0;
-	if (iCurImage->Bpp > 3)
-		Temp = 8;
-	if (TempImage->Origin == IL_ORIGIN_UPPER_LEFT)
-		Temp |= 0x20; //set 5th bit
+	//if (iCurImage->Bpp > 3)
+	//	Temp = 8;
+	//if (TempImage->Origin == IL_ORIGIN_UPPER_LEFT)
+	//	Temp |= 0x20; //set 5th bit
 	iwrite(&Temp, sizeof(ILubyte), 1);
 	iwrite(ID, sizeof(char), IDLen);
 	ifree(ID);
