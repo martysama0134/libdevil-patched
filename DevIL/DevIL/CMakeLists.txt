@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 
-set(CMAKE_C_COMPILER "gcc12")
-set(CMAKE_CXX_COMPILER "g++12")
+set(CMAKE_C_COMPILER "cc")
+set(CMAKE_CXX_COMPILER "c++")
 
 project(ImageLib)
 
