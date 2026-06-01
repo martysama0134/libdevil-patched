@@ -1,0 +1,62 @@
+# Build directories (CMake out-of-source builds — generated .sln/.vcxproj/.cmake live here)
+build/
+build_*/
+out/
+cmake-build-*/
+
+# CMake cache/artifacts (in case of in-source configure)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+_deps/
+
+# Generated config header
+DevIL/DevIL/src-IL/include/config.h
+
+# Visual Studio per-user / local state
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.opensdf
+*.sdf
+*.ipch
+
+# Compiled objects / libraries / binaries
+*.o
+*.obj
+*.lo
+*.slo
+*.la
+*.lai
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.exp
+*.ilk
+*.pdb
+*.idb
+
+# Autotools (legacy build)
+.deps/
+.libs/
+config.log
+config.status
+autom4te.cache/
+
+# Editor / OS cruft
+*.swp
+*~
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
